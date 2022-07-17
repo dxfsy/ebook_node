@@ -148,7 +148,7 @@ app.get('/book/home',(req,res)=> {
 
 app.get('/book/detail',(req,res)=> {
     const conn = connect()
-    const fileName = req.query.fileName
+    const fileName = req.params.fileName
     const sql = `select * from book where fileName='${fileName}'`
     conn.query(sql,(err,results)=> {
         if(err) {
