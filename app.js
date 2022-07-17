@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
 // 链接数据库
 function connect() {
     return mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'lvjiaqi',
+        host: constant.dbHost,
+        user: constant.dbUser,
+        password: constant.dbPwd,
         database: 'book',
     })
 }

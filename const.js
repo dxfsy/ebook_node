@@ -1,10 +1,19 @@
 const env = require('./env')
 
 let resUrl
+let dbHost
+let dbUser
+let dbPwd
 if(env === 'dev'){
   resUrl='http://192.168.0.21:8081'
+  dbHost='localhost'
+  dbUser='root'
+  dbPwd='lvjiaqi'
 }else if(env === 'prod'){
   resUrl="http://81.71.13.160"
+  dbHost='81.71.13.160'
+  dbUser='root'
+  dbPwd='Abcd123456.'
 }
 
 
@@ -168,4 +177,4 @@ const categories = [
   }
 ]
 
-module.exports ={resUrl,category,categories}
+module.exports ={resUrl,category,categories,dbHost,dbUser,dbPwd}
